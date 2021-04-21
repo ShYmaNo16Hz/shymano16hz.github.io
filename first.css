@@ -1,0 +1,187 @@
+/* font-ul de la h1 teste luat de pe: 
+    https://fonts.google.com/ 
+    https://fonts.google.com/specimen/Josefin+Sans
+    https://fonts.google.com/specimen/Denk+One
+*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
+a:hover, a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #fafafa;
+}
+
+main {
+    background-image: url(https://usv.ro/wp-content/uploads/2020/05/panorama_Corp-A_USV-background.jpg);
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.custom-header {
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+    nav a {
+        flex-grow: 1;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Denk One', sans-serif;
+        letter-spacing: 2;
+        position: relative;
+    }
+
+        /*blue line under the text*/
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-radius: 50px;
+            right: 0;
+            height: 5px;
+            transform: scaleX(0);
+            background: #3f51b5;
+            transition: 0.7s transform cubic-bezier(0.06, 0.9, 0.28, 1);
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1)
+        }
+
+
+.custom-page-title {
+    text-align: center;
+    font-family: 'Denk One', sans-serif;
+    padding-top: 25px;
+}
+
+.footer-icons {
+    justify-content: center;
+    display: flex;
+}
+
+    .footer-icons i {
+        font-size: 25px;
+        padding-bottom: 10px;
+        padding-top: 20px;
+    }
+
+    .footer-icons .fa-facebook-f {
+        padding-right: 25px;
+    }
+
+.author-name-title {
+    font-family: 'Denk One', sans-serif;
+}
+
+.author-image {
+    width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.author-description {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+.author-content {
+    height: 72%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float: left;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+
+    /* sforile de la punct */
+    .swing:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #999;
+        top: -10px;
+        left: 50%;
+        z-index: 0;
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+    }
+    /* punctu' de care e prins */
+    .swing:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: -14px;
+        left: 158px;
+        z-index: 5;
+        border-radius: 50% 50%;
+        background: #000;
+    }
+
+@keyframes swing {
+    0% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+.arrow-position {
+    transform: rotateX( 360deg ) rotate( 217deg );
+    position: absolute;
+    width: 25%;
+    right: 22%;
+    bottom: 100px;
+    opacity: 30%;
+}
+
+.find-me-here {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 60px;
+    position: absolute;
+    width: 25%;
+    right: 2%;
+    opacity: 30%;
+    bottom: 40%;
+}
