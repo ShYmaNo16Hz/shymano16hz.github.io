@@ -170,7 +170,7 @@ nav {
 .arrow-position {
     transform: rotateX( 360deg ) rotate( 217deg );
     position: absolute;
-    width: 25%;
+    width: 500px;
     right: 22%;
     bottom: 100px;
     opacity: 30%;
